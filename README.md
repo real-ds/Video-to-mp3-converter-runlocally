@@ -33,14 +33,27 @@ You will also need `pip`, the Python package installer, which is usually include
 1.  **Clone the Repository**
     Open your terminal or Git Bash and clone this repository to your local machine:
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
-    cd YOUR_REPOSITORY_NAME
+    git clone https://github.com/real-ds/Video-to-mp3-converter-runlocally
+    cd Video-to-mp3-converter-runlocally
     ```
 
-2.  **Install Required Libraries**
-    The script depends on the `moviepy` library. Install it using `pip`:
+2.  **Create and Activate a Virtual Environment**
+    It's highly recommended to create a virtual environment to keep project dependencies isolated.
     ```bash
-    pip install moviepy
+    # Create the virtual environment
+    python -m venv venv
+
+    # Activate the environment
+    # On Windows:
+    .\venv\Scripts\activate
+    # On macOS/Linux:
+    source venv/bin/activate
+    ```
+
+3.  **Install Required Libraries**
+    First, Find a file named `requirements.txt` in the main project folder with the following content which should include all the dependencies needed to run this locally.
+    ```bash
+    pip install -r requirements.txt
     ```
 
 ---
@@ -66,13 +79,13 @@ You will also need `pip`, the Python package installer, which is usually include
     > **💡 Tip:** On Windows, you can right-click a file, select "Copy as path," and paste it directly. Remember to keep the `r` before the quotes to handle backslashes correctly.
 
 2.  **Run the Script**
-    Open a terminal or command prompt, navigate to the project directory (where `app.py` is located), and run the script with the following command:
+    Make sure your virtual environment is activated. Then, run the script from the project directory:
     ```bash
     python app.py
     ```
 
 3.  **Find Your Audio Files**
-    The script will create a new folder named `extracted_audio` (or whatever you named it in `output_directory`). Inside this folder, you will find all your converted `.mp3` files.
+    The script will create a new folder named `extracted_audio`. Inside this folder, you will find all your converted `.mp3` files.
 
     ```
     Your-Project-Folder/
@@ -80,14 +93,14 @@ You will also need `pip`, the Python package installer, which is usually include
     │   ├── video1.mp3
     │   ├── IMG_1234.mp3
     │   └── another_video.mp3
-    └── app.py
+    ├── app.py
+    └── requirements.txt
     ```
-
 ---
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
 ## 📄 License
 
