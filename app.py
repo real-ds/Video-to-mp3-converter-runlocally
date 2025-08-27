@@ -4,11 +4,7 @@ from moviepy.editor import VideoFileClip
 # --- User Configuration ---
 
 # 1. Add the full paths to your video files here.
-video_paths = [
-    r"E:\D\Arpita\V5\VID20250626152545.mp4",
-    r"E:\D\Arpita\V5\VID20250626153723.mp4",
-    r"E:\D\Arpita\V5\VID20250626154627.mp4"
-]
+video_paths = []
 
 # 2. Specify the folder where the converted MP3 files will be saved.
 output_directory = "extracted_audio"
@@ -76,4 +72,5 @@ def extract_audio_to_mp3(video_list, output_folder):
 
 # --- Run the Script ---
 if __name__ == "__main__":
+
     extract_audio_to_mp3(video_paths, output_directory)
